@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Registration</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/default.css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+        body {
+	background-color: #ffffff;
+}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	 
+
+    
+
+    <script src="js/jquery.js"></script>
+    <script src="js/CloudRegistration.js"></script>
+    
+    </head>
+    <body>  
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">  
+        <form action="" class="register">
+            <h1> Registration</h1>
+            <fieldset class="row1">
+                <legend><b>Account Details<b>
+                </legend>
+                <p>
+                <label>UserType 
+                  </label>
+                <select id="usertype" name="select" class="row1">
+                  <option value="1">Developer</option>
+                  <option value="2">Tester</option>
+                  
+                  
+                </select>
+                </p>
+                <p>
+                  <label>Email 
+                  </label>
+                    <input id="email" type="text" onblur="validateEmail(this);"/>
+                    <label>Username 
+                  </label>
+                    <input id="username" type="text"/>
+               </p>
+             
+                <p>
+                    <label>Password
+                    </label>
+                    <input type="password" id="pass1"/>
+                    <label>Confirm Password
+                    </label>
+                    <input type="password" id="pass2"/>
+                    
+                </p>
+          </fieldset>
+          <fieldset class="row2">
+                <legend><b>Personal Details<b>
+                </legend>
+                <p>
+                    <label>First Name 
+                    </label>
+                    <input id="fname" type="text" class="long"/>
+                </p>
+                <p>
+                    <label>Last Name 
+                    </label>
+                    <input id="lname" type="text" class="long"/>
+                </p>
+              <p>
+                    <label>Gender </label>
+                    <input id="male" name="Gender" type="radio" value="M"/>
+                    <label class="gender">Male</label>
+                    <input id="female" name="Gender" type="radio" value="F"/>
+                    <label class="gender">Female</label>
+              </p>
+                <p>
+                    <label>Phone No. 
+                    </label>
+                    <input id="phone" type="text" class="long"/>
+                </p>
+              
+                
+                
+               
+               
+          </fieldset>
+          
+            
+                
+                
+                
+                
+                
+                
+              
+                
+            
+          <div>
+            <p>&nbsp;</p>
+          <button class="button" type="button" onClick="location.href='Login.html'">Register &raquo;</button></div>
+          <input type="button" class="button" value="Cancel" onClick="location.href='Login.html'" style="color:#FFFFFF"></input></div>
+        </form>
+    </body>
+</html>
+<script>
+ function myFunction() {
+    var pass1 = document.getElementById("pass1").value;
+    var pass2 = document.getElementById("pass2").value;
+    var ok = true;
+    if (pass1 != pass2) {
+        //alert("Passwords Do not match");
+        document.getElementById("pass1").style.borderColor = "#E34234";
+        document.getElementById("pass2").style.borderColor = "#E34234";
+        alert("PASSWORD DO NOT MATCH")
+    }
+    
+}
+
+</script>
+<script>
+function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+
+}
+</script>
+
+
+   
+
